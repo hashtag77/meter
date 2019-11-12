@@ -1,0 +1,32 @@
+<head>
+<style>
+#countdown2 {
+	text-align: center;
+	margin: 100px;
+	font-weight: 700;
+	font-size: 24px;
+}
+</style>
+</head>
+<div id="countdown2"></div>
+
+<script>
+var input = {
+    year: 0,
+    month: 0,
+    day: 0,
+    hours: 0,
+    minutes: 00,
+    seconds: 00
+};
+
+var timestamp = new Date(input.year, input.month, input.day,
+input.hours, input.minutes, input.seconds);
+
+var interval = 1;
+
+setInterval(function () {
+    timestamp = new Date(timestamp.getTime() + interval * 1000);
+    document.getElementById('countdown2').innerHTML = timestamp.getHours() + ' Hours : ' + timestamp.getMinutes() + ' Minutes : ' + timestamp.getSeconds() + ' Seconds';
+}, Math.abs(interval) * 1000);
+</script>
