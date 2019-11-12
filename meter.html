@@ -27,6 +27,9 @@ var interval = 1;
 
 setInterval(function () {
     timestamp = new Date(timestamp.getTime() + interval * 1000);
+	if(timestamp.getHours() == 9) {
+		alert('done');
+	}	
     document.getElementById('countdown2').innerHTML = timestamp.getHours() + ' Hours : ' + timestamp.getMinutes() + ' Minutes : ' + timestamp.getSeconds() + ' Seconds';
 }, Math.abs(interval) * 1000);
 </script>
